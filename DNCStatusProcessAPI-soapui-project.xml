@@ -1,0 +1,1806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="27e3feb5-f007-4aa1-9cf6-62f014cb9620" activeEnvironment="Default environment" name="DNCStatusProcessAPI" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" encryptionMode="Not encrypted" updated="3.2.5 2020-04-28T15:43:41Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>DNC Status Process API Ready API Test Suite</con:description>
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="2db44a27-089c-4d3a-aef5-2420bfc701c6" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+      <con:endpoint>http://dncstatusprocessapi-dev.us-w2.cloudhub.io</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Phone-numbers" path="/api/dnc-registry/phone-numbers" id="68d31fea-8910-47e9-8f2a-3f7a68fa4688">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Phone-numbers 1" id="0a865748-9bb6-4d20-9a6a-3980e8bd9b49" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html</con:mediaType>
+          <con:status>502 405</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>500 400</con:status>
+          <con:params/>
+          <con:element xmlns:phon="http://dncstatusprocessapi-dev.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">phon:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:phon="http://dncstatusprocessapi-dev.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">phon:Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:phon="http://dncstatusprocessapi-dev.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">phon:Response</con:element>
+        </con:representation>
+        <con:request name="GET" id="9a62e6cf-c59a-4700-9e06-7339249407b0" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="776552af0f234b4cb0ce67ac91de3344"/>
+  &lt;con:entry key="client_secret" value="224B2dD432C344dFa0EF1eFcA0a6F062"/>
+&lt;/xml-fragment></con:setting>
+          </con:settings>
+          <con:endpoint>https://${#Project#URL}</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://dncstatusprocessapi-dev.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+        <con:request name="POST" id="9a62e6cf-c59a-4700-9e06-7339249407b0" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="776552af0f234b4cb0ce67ac91de3344"/>
+  &lt;con:entry key="client_secret" value="224B2dD432C344dFa0EF1eFcA0a6F062"/>
+&lt;/xml-fragment></con:setting>
+          </con:settings>
+          <con:endpoint>https://${#Project#URL}</con:endpoint>
+          <con:request>[
+
+{
+
+   "Country": "US",
+   "SourceListName": "TEST",
+   "Phone": "5104587723",
+   "ExpirationDate": null,
+   "DateAdded": "2018-12-12 09:23:22"
+
+  }
+
+ ]</con:request>
+          <con:originalUri>http://dncstatusprocessapi-dev.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+      <con:method name="GET" id="8ed3ccd6-4430-4640-a444-e080e4a625ce" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Phone</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>Country</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>500 400</con:status>
+          <con:params/>
+          <con:element xmlns:phon="https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">phon:Fault</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html</con:mediaType>
+          <con:status>502</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+          </con:settings>
+          <con:endpoint>https://${#Project#URL}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters><con:entry key="Phone" value="${Properties#Phone}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+          <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+      <con:method name="POST" id="3c405b88-6646-4ab9-abc5-86002f78534f" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:phon="https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">phon:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>400 415</con:status>
+          <con:params/>
+          <con:element xmlns:phon="https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">phon:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>405</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+          </con:settings>
+          <con:endpoint>http://dncstatusprocessapi-qa.us-w2.cloudhub.io</con:endpoint>
+          <con:request>[
+
+{
+
+   "Country":"${Properties#Country}",
+   "SourceListName":"${Properties#SourceListName}",
+   "Phone":"${Properties#Phone}",
+   "ExpirationDate":"${Properties#ExpirationDate}",
+   "DateAdded": "${Properties#DateAdded}"
+
+  }
+
+ ]</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="283b595e-9373-4516-9c3a-129e65827b98" name="DNCStatusProcessAPI-Get">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="3dbe6986-8957-4e86-8272-dcf2ddf56824" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1_Success_Response_GET_PhoneNumberWithCountryCode_CountryName" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="datagen" name="DataGen" id="119be59b-8366-42b0-ad19-309152e07e6e"><con:settings/><con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:property type="Number"><con:configuration><start>1</start><end>999999</end><step/><pattern>+4411320</pattern><random>true</random><persist>false</persist></con:configuration><con:name>RandomPhone</con:name><con:mode>STEP</con:mode><con:shared>false</con:shared></con:property></con:config></con:testStep>
+      <con:testStep type="transfer" name="Property Transfer" id="523d8721-a33d-4ced-8a6f-7f768d73a942"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="true" entitize="false" transferChildNodes="false"><con:name>RandomPhone</con:name><con:sourceType>RandomPhone</con:sourceType><con:sourceStep>DataGen</con:sourceStep><con:sourcePath/><con:targetType>Phone</con:targetType><con:targetStep>Properties</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep>
+      <con:testStep type="properties" name="Properties" id="669d77c1-f51b-4d62-b091-193d6aa53b22">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>+441132777736</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          <con:property><con:name>DateAdded</con:name><con:value>2020-07-22</con:value></con:property><con:property><con:name>ExpirationDate</con:name><con:value>2023-11-22</con:value></con:property><con:property><con:name>SourceListName</con:name><con:value>test</con:value></con:property></con:properties>
+        </con:config>
+      </con:testStep><con:testStep type="restrequest" name="Copy of POST Insert" id="c42d05c5-51a1-4ed7-81e5-ae64ce5bd1f6">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Copy of POST Insert" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[\r
+   {\r
+      "Country" : "${Properties#Country}",\r
+      "SourceListName" : "${Properties#SourceListName}",\r
+      "Phone" : "${Properties#Phone}",\r
+      "ExpirationDate" : "${Properties#ExpirationDate}",\r
+      "DateAdded" : "${Properties#DateAdded}"\r
+   }\r
+]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="438b4522-7987-4ed0-ab5f-707f7139c0fb" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [successRecords]" id="d10be742-ba17-472c-883b-d2630e193d96">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [failedRecords]" id="69510d32-642f-463c-8a3c-2020470894e7">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="49c09698-0ca1-4ad8-88c2-3f1daf4ffd3c">
+              <con:configuration>
+                <SLA>3500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep><con:testStep type="restrequest" name="GET" id="46f3cfd8-b9b7-4463-90ae-3dcbd7936e9f">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f06e6c60-8511-46f4-8df0-76a63fc39770" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="681cb3da-bd28-4944-a088-5ad1156d7788" name="Check for existence of [SourceListName]">
+              <con:configuration>
+                <path>$[0]['SourceListName']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="cd715438-7060-4cac-ba92-993ba880d758" name="Check for existence of [ExpirationDate]">
+              <con:configuration>
+                <path>$[0]['ExpirationDate']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="e0576e35-163d-4327-b6cd-16aa7fa836eb" name="Check for existence of [DateAdded]">
+              <con:configuration>
+                <path>$[0]['DateAdded']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="52cd9a37-4a39-4c8f-91db-a6650b22b32f" name="Response SLA">
+              <con:configuration>
+                <SLA>2500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters><con:entry key="Phone" value="${Properties#Phone}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+            <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep><con:properties>
+        <con:property>
+          <con:name>URL</con:name>
+          <con:value>https://${#Project#URL}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client_id</con:name>
+          <con:value>${#Project#client_id}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client_secret</con:name>
+          <con:value>${#Project#client_secret}</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>669d77c1-f51b-4d62-b091-193d6aa53b22</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    <con:breakPoints><con:testStepId>119be59b-8366-42b0-ad19-309152e07e6e</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>523d8721-a33d-4ced-8a6f-7f768d73a942</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>c42d05c5-51a1-4ed7-81e5-ae64ce5bd1f6</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase>
+    
+    <con:testCase id="f484ac95-3635-4411-bd27-de69a6280475" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2_Success_Response_GET_PhoneNumber_WithoutCountryDialinCode" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="datagen" name="DataGen" id="90c818c4-53e8-49b9-b198-98001a3e40f7"><con:settings/><con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:property type="Number"><con:configuration><start>1</start><end>999999</end><step/><pattern>11320</pattern><random>true</random><persist>false</persist></con:configuration><con:name>RandomPhone</con:name><con:mode>STEP</con:mode><con:shared>true</con:shared></con:property></con:config></con:testStep>
+      <con:testStep type="transfer" name="Property Transfer" id="d1bd15df-b154-4548-8f3e-e9af94a55838"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="true" entitize="false" transferChildNodes="false"><con:name>RandomPhone</con:name><con:sourceType>RandomPhone</con:sourceType><con:sourceStep>DataGen</con:sourceStep><con:sourcePath/><con:targetType>Phone</con:targetType><con:targetStep>Properties</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep>
+      <con:testStep type="properties" name="Properties" id="d3674748-8118-4571-aabe-7a2a1c0ec848">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>1132320508</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          <con:property><con:name>DateAdded</con:name><con:value>2020-07-22</con:value></con:property><con:property><con:name>ExpirationDate</con:name><con:value>2023-11-22</con:value></con:property><con:property><con:name>SourceListName</con:name><con:value>test</con:value></con:property></con:properties>
+        </con:config>
+      </con:testStep><con:testStep type="restrequest" name="Copy of POST Insert" id="13a1c4c5-f2c4-4b49-943d-e6e9a7f5ba10">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Copy of POST Insert" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[\r
+   {\r
+      "Country" : "${Properties#Country}",\r
+      "SourceListName" : "${Properties#SourceListName}",\r
+      "Phone" : "${Properties#Phone}",\r
+      "ExpirationDate" : "${Properties#ExpirationDate}",\r
+      "DateAdded" : "${Properties#DateAdded}"\r
+   }\r
+]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="438b4522-7987-4ed0-ab5f-707f7139c0fb" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [successRecords]" id="d10be742-ba17-472c-883b-d2630e193d96">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [failedRecords]" id="69510d32-642f-463c-8a3c-2020470894e7">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="49c09698-0ca1-4ad8-88c2-3f1daf4ffd3c">
+              <con:configuration>
+                <SLA>3500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep><con:testStep type="restrequest" name="GET" id="68c58d9d-e286-48de-baeb-a53804edec13">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f06e6c60-8511-46f4-8df0-76a63fc39770" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="681cb3da-bd28-4944-a088-5ad1156d7788" name="Check for existence of [SourceListName]">
+              <con:configuration>
+                <path>$[0]['SourceListName']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="cd715438-7060-4cac-ba92-993ba880d758" name="Check for existence of [ExpirationDate]">
+              <con:configuration>
+                <path>$[0]['ExpirationDate']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="e0576e35-163d-4327-b6cd-16aa7fa836eb" name="Check for existence of [DateAdded]">
+              <con:configuration>
+                <path>$[0]['DateAdded']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="52cd9a37-4a39-4c8f-91db-a6650b22b32f" name="Response SLA">
+              <con:configuration><SLA>5000</SLA></con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters><con:entry key="Phone" value="${Properties#Phone}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+            <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep><con:properties>
+        <con:property>
+          <con:name>URL</con:name>
+          <con:value>${#Project#URL}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client_id</con:name>
+          <con:value>${#Project#client_id}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client_secret</con:name>
+          <con:value>${#Project#client_secret}</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>669d77c1-f51b-4d62-b091-193d6aa53b22</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    <con:breakPoints><con:testStepId>119be59b-8366-42b0-ad19-309152e07e6e</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>523d8721-a33d-4ced-8a6f-7f768d73a942</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>c42d05c5-51a1-4ed7-81e5-ae64ce5bd1f6</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase>
+    <con:testCase id="beeb26e1-316c-48f0-8e58-4a60d5ba4ca0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="3_Error_Response_GET_Invalid_CountryCode" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="da8c0ff3-7134-4050-a932-017cf539bcb9">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>+441132298099</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GBB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET" id="ef7bd18a-89b6-4461-ac8b-5cab05c23008">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="JsonPath Existence Match" id="9f074091-ebcc-4a02-a49e-b300ade17a45" name="Check for existence of [errorMessage]">
+              <con:configuration>
+                <path>$['errorMessage']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="00808ec2-7916-421f-bbbe-26cd449e36a5" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Fault[1]/ns1:message[1]</con:xpath>
+                  <con:element>message</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Internal Server error</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Fault[1]/ns1:errorMessage[1]</con:xpath>
+                  <con:element>errorMessage</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>contains</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>bad request (400)</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">
+   <message>Internal Server error</message>
+   <errorMessage>HTTP GET on resource 'https://dnclookupsystemapi-qa.us-w2.cloudhub.io:443/api/master-dnc/phone-numbers' failed: bad request (400).</errorMessage>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="e2ce846d-520e-4819-aead-e19deae43c16" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>500</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="a37bb6f0-610b-4aa1-9ec2-597713aea303" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters><con:entry key="Phone" value="${Properties#Phone}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+            <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>da8c0ff3-7134-4050-a932-017cf539bcb9</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="743467eb-3299-46ea-a4b4-757737285dd7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4_Error_Response_GET_No_CountryCode" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="907e5bc6-943c-40fa-997a-faaefcc71efd">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>+441132298099</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value/>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET" id="2e4fb833-d244-46d9-8dcb-ad76eb2a28d6">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="2ac11b6c-30d7-42b9-b65a-950837a2cf3b" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>500</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" name="Check for existence of [errorMessage]" id="873dcc7a-772f-4aad-9b56-7da331409fff">
+              <con:configuration>
+                <path>$['errorMessage']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" name="Message Content Assertion" id="cb427ec0-1df9-476b-a0e6-ce1d561b8df2">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Fault[1]/ns1:message[1]</con:xpath>
+                  <con:element>message</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Internal Server error</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Fault[1]/ns1:errorMessage[1]</con:xpath>
+                  <con:element>errorMessage</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>contains</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>bad request (400)</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">
+   <message>Internal Server error</message>
+   <errorMessage>HTTP GET on resource 'https://dnclookupsystemapi-qa.us-w2.cloudhub.io:443/api/master-dnc/phone-numbers' failed: bad request (400).</errorMessage>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="d39fb81c-69bc-4965-a024-409872c09c82" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters><con:entry key="Phone" value="${Properties#Phone}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+            <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>907e5bc6-943c-40fa-997a-faaefcc71efd</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="d6c41c8f-1ee7-408e-ab87-8a9ae91d3bb0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="5_Error_Response_GET_Invalid_PhoneNumber" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="596655ab-9974-4aa4-9b70-01ad92c6bf24">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>5298271818</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET" id="d3e9d3b2-6027-4c87-8258-35661c719049">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f06e6c60-8511-46f4-8df0-76a63fc39770" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="41d4e019-cd53-47bc-a846-310bc2b7c4cc" name="Check for existence of [message]">
+              <con:configuration>
+                <path>$['message']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="d1e6fe28-1faa-4b60-bab1-0e92d8b5c027" name="Match content of [message]">
+              <con:configuration>
+                <path>$['message']</path>
+                <content>"No records found."</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="020c91ec-b257-4664-9a99-b68b23cee83b" name="Response SLA">
+              <con:configuration>
+                <SLA>3000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters><con:entry key="Phone" value="${Properties#Phone}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+            <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>cc692f43-0ec5-41b2-b620-4d8dc383261b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="63ee3113-4a37-4278-9399-a92a6424a6ad" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="6_Error_Response_GET_Invalid_PhoneNumberFormat" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="cc692f43-0ec5-41b2-b620-4d8dc383261b">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>@795795630!</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET" id="e2d957c2-fb7c-44e8-8785-8d182ef947b8">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f06e6c60-8511-46f4-8df0-76a63fc39770" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="038e66d1-fd90-4e80-8b39-0e054462ae7f" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Fault[1]/ns1:message[1]</con:xpath>
+                  <con:element>message</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Bad request</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Fault[1]/ns1:errorMessage[1]</con:xpath>
+                  <con:element>errorMessage</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>"Invalid value '@795795630!' for query parameter Phone. Syntax error in the following text: '@795795630!'"</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">
+   <message>Bad request</message>
+   <errorMessage>"Invalid value '@795795630!' for query parameter Phone. Syntax error in the following text: '@795795630!'"</errorMessage>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters><con:entry key="Phone" value="${Properties#Phone}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+            <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>cc692f43-0ec5-41b2-b620-4d8dc383261b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase><con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="4d42df0f-cea1-463d-9cf7-83807959c2e0" name="DNCStatusProcessAPI-POST">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="c9eb482b-a75b-4f53-b55c-250bd4d31a77" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="7_Success_Response_POST_Valid_PhoneNumber_Valid_Country" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="7f86d459-bd9f-411c-9b75-20f838ebe46a">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>SourceListName</con:name>
+              <con:value>.ctpsonline.org.uk</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>01132298077</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExpirationDate</con:name>
+              <con:value>2025-12-12 00:00:00</con:value>
+            </con:property>
+            <con:property>
+              <con:name>DateAdded</con:name>
+              <con:value>2020-07-18 00:00:00</con:value>
+            </con:property>
+            <con:property>
+              <con:name>RandomNumber</con:name>
+              <con:value>01770953664</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExpirationDateUpdated</con:name>
+              <con:value>2040-10-10</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Groovy Script" id="e1a0c92d-a2af-419c-a4e6-dacb536b7598">
+        <con:settings/>
+        <con:config>
+          <script>def numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+Random rnd = new Random()
+def result = "01770"
+for (i=0; i &lt; 6; i++) {
+   result += numbers[rnd.nextInt(numbers.size)]
+}
+
+return result</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Property Transfer" id="947d7ce8-0480-401f-b519-d4ccdebbfcba">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>Transfer</con:name>
+            <con:sourceType>result</con:sourceType>
+            <con:sourceStep>Groovy Script</con:sourceStep>
+            <con:sourcePath/>
+            <con:targetType>RandomNumber</con:targetType>
+            <con:targetStep>Properties</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET" id="53457a3b-80b7-42a5-ac64-6dc33a32db87">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters><con:entry key="Phone" value="${Properties#RandomNumber}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+            <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="goto" name="Conditional Goto" id="efb38330-d5ec-4f4b-8f45-349521a1927c">
+        <con:settings/>
+        <con:config xsi:type="con:GotoStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:condition>
+            <con:name>ExistingNumber</con:name>
+            <con:type>XPATH</con:type>
+            <con:expression>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Response[1]/ns1:message[1]!="No records found."</con:expression>
+            <con:targetStep>Groovy Script</con:targetStep>
+          </con:condition>
+          <con:condition>
+            <con:name>NewNumber</con:name>
+            <con:type>XPATH</con:type>
+            <con:expression>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Response[1]/ns1:message[1]="No records found."</con:expression>
+            <con:targetStep>POST Insert</con:targetStep>
+          </con:condition>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST Insert" id="3240bd9f-9c74-44aa-9dac-0d296dd5cb39">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST Insert" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[\r
+   {\r
+      "Country" : "${Properties#Country}",\r
+      "SourceListName" : "${Properties#SourceListName}",\r
+      "Phone" : "${Properties#RandomNumber}",\r
+      "ExpirationDate" : "${Properties#ExpirationDate}",\r
+      "DateAdded" : "${Properties#DateAdded}"\r
+   }\r
+]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="438b4522-7987-4ed0-ab5f-707f7139c0fb" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [successRecords]" id="d10be742-ba17-472c-883b-d2630e193d96">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [failedRecords]" id="69510d32-642f-463c-8a3c-2020470894e7">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="49c09698-0ca1-4ad8-88c2-3f1daf4ffd3c">
+              <con:configuration>
+                <SLA>3500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST Update Date" id="c85327e7-b47e-498a-a30c-bd0be454afc3">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST Update Date" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[\r
+   {\r
+      "Country" : "${Properties#Country}",\r
+      "SourceListName" : "${Properties#SourceListName}",\r
+      "Phone" : "${Properties#RandomNumber}",\r
+      "ExpirationDate" : "${Properties#ExpirationDateUpdated}",\r
+      "DateAdded" : "${Properties#DateAdded}"\r
+   }\r
+]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="438b4522-7987-4ed0-ab5f-707f7139c0fb" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="ec7c0163-6699-4ab0-9f28-46fef689d6d4" name="Check count of [successRecords]">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="54c57f63-aba1-4735-a116-6b5c08a32dd7" name="Check count of [failedRecords]">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="74617afd-543e-4aab-a3f4-accf2313ddad" name="Response SLA">
+              <con:configuration>
+                <SLA>2500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET Updated" id="eeee5458-171c-407f-bb20-92af9ce4ee7b">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET Updated" id="d12a8723-6ce2-48a4-8df6-5836caa23952" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="JsonPath Match" id="5676f6f5-803f-4fac-8c69-51cae2b14c16" name="Match content of [ExpirationDate]">
+              <con:configuration>
+                <path>$[0]['ExpirationDate']</path>
+                <content>${Properties#ExpirationDateUpdated}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters><con:entry key="Phone" value="${Properties#RandomNumber}"/><con:entry key="Country" value="${Properties#Country}"/></con:parameters>
+            <con:parameterOrder><con:entry>Phone</con:entry><con:entry>Country</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>LRN_Number</con:name>
+          <con:value>123456789</con:value>
+        </con:property>
+        <con:property>
+          <con:name>RandomNumber</con:name>
+          <con:value>123</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>7f86d459-bd9f-411c-9b75-20f838ebe46a</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>e1a0c92d-a2af-419c-a4e6-dacb536b7598</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>947d7ce8-0480-401f-b519-d4ccdebbfcba</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>53457a3b-80b7-42a5-ac64-6dc33a32db87</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>efb38330-d5ec-4f4b-8f45-349521a1927c</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="f236b7db-72cf-470f-94c1-c8cca1ac06ed" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="8_Success_Response_POST_Update_Dates" searchProperties="true" disabled="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="e28a02cf-b92d-40bc-ae75-52226bbf195e">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>SourceListName</con:name>
+              <con:value>.ctpsonline.org.uk</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>01132298077</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExpirationDate</con:name>
+              <con:value>2040-10-10 00:00:00</con:value>
+            </con:property>
+            <con:property>
+              <con:name>DateAdded</con:name>
+              <con:value>2020-09-09 00:00:00</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="16ef383b-2679-45e8-8806-cf57433133d5">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+
+{
+
+   "Country":"${Properties#Country}",
+   "SourceListName":"${Properties#SourceListName}",
+   "Phone":"${Properties#Phone}",
+   "ExpirationDate":"${Properties#ExpirationDate}",
+   "DateAdded": "${Properties#DateAdded}"
+
+  }
+
+ ]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="438b4522-7987-4ed0-ab5f-707f7139c0fb" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="ec7c0163-6699-4ab0-9f28-46fef689d6d4" name="Check count of [successRecords]">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="54c57f63-aba1-4735-a116-6b5c08a32dd7" name="Check count of [failedRecords]">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="74617afd-543e-4aab-a3f4-accf2313ddad" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>e28a02cf-b92d-40bc-ae75-52226bbf195e</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="25f29125-fbb7-4ece-9efb-3fb400fc6ff7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="9_Error_Response_POST_Invalid_Country_Format" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="849ca29f-afb4-4dfa-9eb6-9b25ce82ad55">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GBB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>SourceListName</con:name>
+              <con:value>.ctpsonline.org.uk</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>01132298049</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExpirationDate</con:name>
+              <con:value>2020-09-09 00:00:00</con:value>
+            </con:property>
+            <con:property>
+              <con:name>DateAdded</con:name>
+              <con:value>2020-09-09 00:00:00</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="c9b6c4eb-b635-4b4d-93dd-29d4597b198a">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+
+{
+
+   "Country":"${Properties#Country}",
+   "SourceListName":"${Properties#SourceListName}",
+   "Phone":"${Properties#Phone}",
+   "ExpirationDate":"${Properties#ExpirationDate}",
+   "DateAdded": "${Properties#DateAdded}"
+
+  }
+
+ ]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="JsonPath Count" name="Check count of [failedRecords]" id="3707b403-383e-42f2-a0da-fc585479555a">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [successRecords]" id="d0df25b4-ff4f-499b-9b47-cba4d047a9c1">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="Match content of [error]" id="94902fa3-bd05-4f21-9f3d-abfe08d7cd84">
+              <con:configuration>
+                <path>$['failedRecords'][0]['error']</path>
+                <content>"Phone Number is not valid"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="1a0a8ea6-92bb-4edf-800d-ca1e29ac4d9a" name="Match content of [errorDescription]">
+              <con:configuration>
+                <path>$['failedRecords'][0]['errorDescription']</path>
+                <content>"valid two chars country code is required"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="35e75961-f25a-493e-947b-b1d8c885c920">
+              <con:configuration><SLA>1500</SLA></con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>849ca29f-afb4-4dfa-9eb6-9b25ce82ad55</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="12ea9019-5b9e-400f-a9b6-0b58b6f1a18f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="10_Error_Response_POST_Invalid_Country" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="be9f6b85-d540-4b28-ad56-9cb62f0e1eb2">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>UK</con:value>
+            </con:property>
+            <con:property>
+              <con:name>SourceListName</con:name>
+              <con:value>.ctpsonline.org.uk</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>01132298049</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExpirationDate</con:name>
+              <con:value>2020-09-09 00:00:00</con:value>
+            </con:property>
+            <con:property>
+              <con:name>DateAdded</con:name>
+              <con:value>2020-09-09 00:00:00</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="5351d029-36d8-4030-95d1-c799363d0663">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+
+{
+
+   "Country":"${Properties#Country}",
+   "SourceListName":"${Properties#SourceListName}",
+   "Phone":"${Properties#Phone}",
+   "ExpirationDate":"${Properties#ExpirationDate}",
+   "DateAdded": "${Properties#DateAdded}"
+
+  }
+
+ ]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="JsonPath Count" name="Check count of [failedRecords]" id="0d7de1a6-3a30-4289-8e7d-307d668dc4a5">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [successRecords]" id="f2ad2a6a-1aa5-412a-86c7-e1633a3b2112">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="3276de43-5191-41ff-84f8-f8fdc4daf4e0" name="Match content of [errorDescription]">
+              <con:configuration>
+                <path>$['failedRecords'][0]['errorDescription']</path>
+                <content>"error parsing phoneNumber or countryCode"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="e8810172-dde6-4619-9cb0-2751e742ceae" name="Match content of [error]">
+              <con:configuration>
+                <path>$['failedRecords'][0]['error']</path>
+                <content>"Phone Number is not valid"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="6ab9b412-9151-4520-9a0d-c7adbc8ee873" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>be9f6b85-d540-4b28-ad56-9cb62f0e1eb2</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="88ab9ea9-3ee3-437a-82aa-6272c4d1b0fd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="11_Error_Response_POST_Invalid_TimeStamp" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="565d5cb4-4cd7-46ef-8b88-9439b7d88bba">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>SourceListName</con:name>
+              <con:value>.ctpsonline.org.uk</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>+447911223499</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExpirationDate</con:name>
+              <con:value>20180101</con:value>
+            </con:property>
+            <con:property>
+              <con:name>DateAdded</con:name>
+              <con:value>2018-12-12 09:23:22</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="390b4fc7-04bc-47d7-8df2-2393a4c72660">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+
+{
+
+   "Country":"${Properties#Country}",
+   "SourceListName":"${Properties#SourceListName}",
+   "Phone":"${Properties#Phone}",
+   "ExpirationDate":"${Properties#ExpirationDate}",
+   "DateAdded": "${Properties#DateAdded}"
+
+  }
+
+ ]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="JsonPath Count" id="67907d78-addf-48c6-944d-cfca4633a022" name="Check count of [failedRecords]">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="a23d77a6-1557-4597-ae24-a5167e896ded" name="Check count of [successRecords]">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="d7ae88e1-1d4e-4984-bd35-2ca85a949755" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Response[1]/ns1:successRecords[1]</con:xpath>
+                  <con:element>successRecords</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue xsi:nil="true"/>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Response[1]/ns1:failedRecords[1]/ns1:e[1]/ns1:PhoneNumber[1]</con:xpath>
+                  <con:element>PhoneNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>+447911223499</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers';
+//ns1:Response[1]/ns1:failedRecords[1]/ns1:e[1]/ns1:error[1]</con:xpath>
+                  <con:element>error</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>contains</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Bad value for type timestamp/date/time</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers">
+   <successRecords/>
+   <failedRecords>
+      <e>
+         <PhoneNumber>+447911223499</PhoneNumber>
+         <error>Bad value for type timestamp/date/time: {1}</error>
+      </e>
+   </failedRecords>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="03b78b67-0c96-4350-9f25-cf73d2292a71" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>565d5cb4-4cd7-46ef-8b88-9439b7d88bba</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="68fd42c9-3235-41f2-ad1f-2544068dc21b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="12_Success_Response_POST_Valid_PhoneNumber_Any_Country" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="90210a6f-74d8-4b2b-8cd5-4eed7c8fee4a">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Country</con:name>
+              <con:value>US</con:value>
+            </con:property>
+            <con:property>
+              <con:name>SourceListName</con:name>
+              <con:value>.ctpsonline.org.uk</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Phone</con:name>
+              <con:value>9165183838</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExpirationDate</con:name>
+              <con:value>2020-12-12</con:value>
+            </con:property>
+            <con:property>
+              <con:name>DateAdded</con:name>
+              <con:value>2020-09-09 00:00:00</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="6a953db0-085d-45ac-8b13-74da58ea2fc8">
+        <con:settings/>
+        <con:config service="http://dncstatusprocessapi-qa.us-w2.cloudhub.io" resourcePath="/api/dnc-registry/phone-numbers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="4b878397-7d9d-4bd5-bcf1-f834d88126d0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+
+{
+
+   "Country":"${Properties#Country}",
+   "SourceListName":"${Properties#SourceListName}",
+   "Phone":"${Properties#Phone}",
+   "ExpirationDate": "${Properties#ExpirationDate}",
+   "DateAdded": "${Properties#DateAdded}"
+
+  }
+
+ ]</con:request>
+            <con:originalUri>https://dncstatusprocessapi-qa.us-w2.cloudhub.io/api/dnc-registry/phone-numbers</con:originalUri>
+            <con:assertion type="JsonPath Count" name="Check count of [failedRecords]" id="87cd147e-3e1f-4ea4-a8d0-4b2f26f340dd">
+              <con:configuration>
+                <path>$['failedRecords']</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="Check count of [successRecords]" id="f699d5f6-5bfc-4cbf-bf48-b739687ccec8">
+              <con:configuration>
+                <path>$['successRecords']</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="b8c2fa9f-bc86-48c3-8962-dbef4a534550">
+              <con:configuration>
+                <SLA>3000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>be9f6b85-d540-4b28-ad56-9cb62f0e1eb2</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>URL</con:name>
+      <con:value>dncstatusprocessapi-qa.us-w2.cloudhub.io</con:value>
+    </con:property>
+    <con:property>
+      <con:name>client_id</con:name>
+      <con:value>776552af0f234b4cb0ce67ac91de3344</con:value>
+    </con:property>
+    <con:property>
+      <con:name>client_secret</con:name>
+      <con:value>224B2dD432C344dFa0EF1eFcA0a6F062</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

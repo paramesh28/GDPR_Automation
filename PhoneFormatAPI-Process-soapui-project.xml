@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6510e7e8-bdcf-40e2-910e-0fb5d3114a80" activeEnvironment="Default environment" name="PhoneFormatAPI-Process" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" encryptionMode="Not encrypted" updated="3.2.5 2020-04-28T15:43:41Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="48917ed9-b483-45e4-81cc-866fbfa49022" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://phoneformatprocessapi.us-w2.cloudhub.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+      <con:endpoint>http://phoneformatprocessapi.us-w2.cloudhub.io</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Convert-to-E164" path="/api/format/convert-to-E164" id="35a88989-219f-4a7b-ab0f-b95f85a25e62">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Convert-to-E164 1" id="d6fb3175-d92f-4a00-a070-150a444d8fd3" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>400 401 405 500</con:status>
+          <con:params/>
+          <con:element xmlns:con1="http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164">con1:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html</con:mediaType>
+          <con:status>504 405</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:con1="http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164">con1:Fault</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="776552af0f234b4cb0ce67ac91de3344"/>
+  &lt;con:entry key="client_secret" value="224B2dD432C344dFa0EF1eFcA0a6F062"/>
+&lt;/xml-fragment></con:setting>
+          </con:settings>
+          <con:endpoint>https://phoneformatprocessapi-qa.us-w2.cloudhub.io</con:endpoint>
+          <con:request>[{
+"phoneNumber": "(+1)317-364----",
+"countryCode": "u"
+}]</con:request>
+          <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="546c7ed3-87a9-41b4-92d6-8919a137d34d" name="PhoneFormatAPI_Process_Suite">
+    <con:settings>
+      <con:setting id="IncludeOverview">true</con:setting>
+      <con:setting id="IncludeResults">true</con:setting>
+      <con:setting id="FlowLayout">false</con:setting>
+      <con:setting id="ErrorDetails">true</con:setting>
+      <con:setting id="IncludeCoverage">true</con:setting>
+    </con:settings>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="b0427ff5-dfbf-4e10-a166-d2959a466dd8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1_Valid_Response_ConvertPhoneNumber_E164Format" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="c8f2533b-303d-486a-8e2e-156de20d95f6">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>+44 0113 2047224D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="8f906752-5a76-4aa7-85db-9da0704b59f0">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+              <con:setting id="RecordRequestRepresentations">true</con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+}]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Match" id="34264a2a-9668-47a0-a87f-581563a1511b" name="formattedPhone">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>"+441132047224"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="d3a4a34f-5154-446f-96d8-632dde1daaa3" name="validNumber true">
+              <con:configuration>
+                <path>$[0]['validNumber']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="33bb1271-e5e8-4de7-8054-d42fdc94f740" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>c8f2533b-303d-486a-8e2e-156de20d95f6</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="5516c847-40cd-494f-9741-add4e52323b8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2_Invalid_Response_Invalid_PhoneNumbers" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="c0e4ca9a-242d-489b-9c69-eb93d5ee6517">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>(+44)044-66-8184a</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber1</con:name>
+              <con:value>0446681812</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode1</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber2</con:name>
+              <con:value>044-668-18aa</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode2</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber3</con:name>
+              <con:value>(+44)044-66-818aa</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode3</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber4</con:name>
+              <con:value>(+44) 0113 204722 aa</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode4</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber5</con:name>
+              <con:value>(+44)0113 204722</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode5</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber6</con:name>
+              <con:value>(+44)0113 2047aa</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode6</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="fdb287dc-baff-4680-b3b7-2d332bfd84f7">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+},
+{
+"phoneNumber": "${Properties#phoneNumber1}",
+"countryCode": "${Properties#countryCode1}"
+},
+{ "phoneNumber" : "${Properties#phoneNumber2}",
+"countryCode" : "${Properties#countryCode2}"
+},
+{ "phoneNumber" : "${Properties#phoneNumber3}",
+"countryCode" : "${Properties#countryCode3}"
+},
+{ "phoneNumber" : "${Properties#phoneNumber4}",
+"countryCode" : "${Properties#countryCode4}"
+},
+{ "phoneNumber" : "${Properties#phoneNumber5}",
+"countryCode" : "${Properties#countryCode5}"
+},
+{ "phoneNumber" : "${Properties#phoneNumber6}",
+"countryCode" : "${Properties#countryCode6}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Count" name="validNumber false (7)" id="391c2376-65a7-43dc-9ba2-952b4622118d">
+              <con:configuration>
+                <path>$[?(@.validNumber == false)]</path>
+                <content>7</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="formattedPhone null (7)" id="f1577d89-7993-49f4-afed-b8a21897ad6a">
+              <con:configuration>
+                <path>$[?(@.formattedPhone != null)]</path>
+                <content>7</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="errorDescription none" id="f8bbe641-6457-4d7c-90a1-d1a8bef09ed0">
+              <con:configuration>
+                <path>$[?(@.errorDescription)]</path>
+                <content>0</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="548c4e0f-2d9e-4fdb-a4d6-92b6a90637ad" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>c0e4ca9a-242d-489b-9c69-eb93d5ee6517</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="6f50cc4e-c28d-43ce-bc67-04a8c74fb519" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="3_Valid_Response_Valid_CountrySpecificFormat" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="966a2728-a317-490c-8935-7a56814b685c">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber1</con:name>
+              <con:value>0113 2047224D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode1</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>+44 0113 2047224D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="bdb52883-5697-4945-ab70-f2ba0f9e4605">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber1}",
+"countryCode": "${Properties#countryCode1}"
+},
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Count" name="validNumber true (2)" id="5ffbce68-5612-404e-8652-40c470aa5a05">
+              <con:configuration>
+                <path>$[?(@.validNumber == true)]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="formattedPhone not null (2)" id="4df3a863-2aa0-4559-b6de-268064d05664">
+              <con:configuration>
+                <path>$[?(@.formattedPhone != null)]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="77b5f19c-1d46-49d1-a6de-67852b018255">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>966a2728-a317-490c-8935-7a56814b685c</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="96cf12ad-042d-4bf0-b739-c88cc5b2c601" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4_Valid_Response_Valid_CountyCode_Format" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="bc6d33d9-855d-40e9-890b-f56df9ebca9e">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>+44 0113 2047224D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber1</con:name>
+              <con:value>(+44) 0113 2047224</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode1</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="b08422c0-7bac-4e6c-865c-f1394f12ed77">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+},
+{
+"phoneNumber": "${Properties#phoneNumber1}",
+"countryCode": "${Properties#countryCode1}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Count" name="validNumber true (2)" id="3a76fdc0-ab1e-488c-97f9-8a62025dd92b">
+              <con:configuration>
+                <path>$[?(@.validNumber == true)]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="formattedPhone not null (2)" id="cc335e3e-d94d-4028-9494-18147bad627b">
+              <con:configuration>
+                <path>$[?(@.formattedPhone != null)]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="5fb0e6fc-ff15-4245-8efa-7d4e37d5dae7">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>bc6d33d9-855d-40e9-890b-f56df9ebca9e</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="5bc76b9b-3a70-49e2-937b-9354f660ca68" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="5_Valid_Response_Valid_PhoneNumber_With_Space" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="5917ffab-b0b2-48a3-9451-1ec0384177c8">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>(+44) 0113 204722 4D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber1</con:name>
+              <con:value>(+44) 0113 2047224</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode1</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="394c6304-8ca7-4de7-afae-aa72e466e576">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+},
+{
+"phoneNumber": "${Properties#phoneNumber1}",
+"countryCode": "${Properties#countryCode1}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Count" name="validNumber true (2)" id="58341aa4-b8b6-4658-b3ae-fdd2869efa2d">
+              <con:configuration>
+                <path>$[?(@.validNumber == true)]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="formattedPhone not null (2)" id="abf5d148-7999-439a-81ff-64be2dc2efde">
+              <con:configuration>
+                <path>$[?(@.formattedPhone != null)]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="02652bca-715e-4716-b945-b1f79751ddb2">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>5917ffab-b0b2-48a3-9451-1ec0384177c8</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="b928253e-c575-419f-a4f0-aa5d422d8b70" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="6_Valid_Response_Max_PhoneNumber_Length" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="0009e234-9088-47f9-8f7b-28e4c0ba961d">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>(+44) 0113 204722 4D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="a9b22b38-e35e-48e8-9a0f-990f88b3beda">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Match" name="validNumber true" id="8b45a58c-d8e4-4924-88a5-a9aec274a244">
+              <con:configuration>
+                <path>$[0]['validNumber']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" name="formattedPhone not empty" id="1e0ed9b6-88f4-484c-8efa-c209b46f2aa5">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" name="formattedPhone not null" id="587c5b47-b960-4533-abbc-117037f20fe1">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx/>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="9e01f214-2bf1-467b-8cd0-c73bb68b4d59">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>0009e234-9088-47f9-8f7b-28e4c0ba961d</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="f8555a57-ef50-45ce-9a8b-840646790931" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="7_Valid_Response_Phone_Number_SpecialCharacter" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="cff7ae2b-e166-4c2a-b14e-686b6c4359b8">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>(+44) 0113 204722!4D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="487b3309-44f4-4709-a4d3-cced9dcb6306">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Match" name="validNumber true" id="f9eb45e5-f5bf-4dfc-b02a-560db1a07b03">
+              <con:configuration>
+                <path>$[0]['validNumber']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" name="formattedPhone not empty" id="50b41b32-484d-4377-94d0-777a55675525">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" name="formattedPhone not null" id="2057fd33-de6f-4c6f-a005-23a7c988847d">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx/>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="f534cc29-e791-4314-b007-8117778cbc3b">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>cff7ae2b-e166-4c2a-b14e-686b6c4359b8</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="d876e7a1-32cb-49ed-8c8b-63e39445cc11" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="8_Valid_Response_Invalid_Number_Invalid_CountryCode" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="ce872db4-f932-43fe-9d44-24f647767275">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>(+44)044-66-818aa</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB1</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber1</con:name>
+              <con:value>(+44) 0113 204722 4D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode1</con:name>
+              <con:value>AMER</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="e455096c-e9ef-40ff-80cb-5707ad5df63b">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+},
+{
+"phoneNumber": "${Properties#phoneNumber1}",
+"countryCode": "${Properties#countryCode1}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Count" name="validNumber false (2)" id="0e72dff1-7383-4228-a195-8f4130b5ecd4">
+              <con:configuration>
+                <path>$[?(@.validNumber == false)]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="formattedPhone null (2)" id="80ad78b9-feff-40cf-a676-371517d54815">
+              <con:configuration>
+                <path>$[?(@.formattedPhone == null)]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="errorDescription countryCode (2)" id="aaf83686-60a0-449a-a3c6-bf0a357495ba">
+              <con:configuration>
+                <path>$[?(@.errorDescription == 'valid two chars country code is required')]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="83dc0124-d301-43a4-98ee-9465e5b6f1ca" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>ce872db4-f932-43fe-9d44-24f647767275</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="7fdb5acd-55c1-46d0-84e9-8304b4e1e127" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="9_Invalid_PhoneNumber_Invalid_CountryCode" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="367f0419-d470-4441-bdc5-427de18623bc">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>(+44)044-66-818aa</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>OO</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber1</con:name>
+              <con:value>00 61 2 9876 5432</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode1</con:name>
+              <con:value>AUS</con:value>
+            </con:property>
+            <con:property>
+              <con:name>phoneNumber2</con:name>
+              <con:value>+44 (0)845 371 1057</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode2</con:name>
+              <con:value>GBB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="51ff3c68-b86a-4743-b5ac-6ed754a1f1d8">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+},
+{
+"phoneNumber": "${Properties#phoneNumber1}",
+"countryCode": "${Properties#countryCode1}"
+},
+{
+"phoneNumber": "${Properties#phoneNumber2}",
+"countryCode": "${Properties#countryCode2}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Match" name="errorDescription[1] parsing" id="3ea4f5e8-a635-44ee-9c65-8c79fa688a5b">
+              <con:configuration>
+                <path>$[1]['errorDescription']</path>
+                <content>"valid two chars country code is required"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="errorDescription[2][3] countryCode" id="660966eb-fe72-49f6-9135-3e9afe9e04a2">
+              <con:configuration>
+                <path>$[?(@.errorDescription == 'valid two chars country code is required')]</path>
+                <content>2</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="dd5d9f89-7bee-4192-849b-5a797ad78622" name="validNumber false (3)">
+              <con:configuration>
+                <path>$[?(@.validNumber == false)]</path>
+                <content>3</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" name="formattedPhone null (3)" id="7b1f0ee8-fc2b-46fe-bdd3-17698723200c">
+              <con:configuration>
+                <path>$[?(@.formattedPhone == null)]</path>
+                <content>3</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="2066f9a6-8d72-41a1-b848-7e309b6f16da" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>367f0419-d470-4441-bdc5-427de18623bc</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="7bfaf31d-2a51-4339-ba9c-75038784b81c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="10_Validate_ Invalid_URI" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="f253db4f-7677-401d-ad75-5f667015f007">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>(+44)044-66-818aa</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode1</con:name>
+              <con:value>US</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="ffd243fc-6db4-47e6-bfcb-4b8bc7d97ac6">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://phoneformatprocessapi-qa.us-w2.cloudhub.io</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}",
+"countryCode": "${Properties#countryCode1}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f2c7fd04-4cb0-4885-b01f-8f201179dea4" name="HTTP Status 400">
+              <con:settings/>
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="20ff0b0e-7d7c-43f0-b0b9-43e0a9cf3687" name="Response">
+              <con:configuration>
+                <path>$</path>
+                <content>{
+   "message" : "Bad request",
+   "errorDescription" : "Unsupported chars in string value (probably a binary file)  Location:   Position: Line 0,  Column 0"
+}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>f253db4f-7677-401d-ad75-5f667015f007</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="3e5e477b-0c0a-422f-962b-fee3aee7e92f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="11_Valid_Response_Invalid_PhoneNumber_Format" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="e946ecb8-04d2-4d4c-b8b3-b62e26684897">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>(+44)044-ff-dddqaa</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="9dd0c781-b3b7-4ef8-aa0e-dbbdca249367">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[
+{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+}
+]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Match" id="6ee27edf-5306-40cb-a079-d2b321b19ae9" name="validNumber false">
+              <con:configuration>
+                <path>$[0]['validNumber']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="ebb3eff7-d7ef-4d31-aa37-d8897952ea3a" name="formattedPhone not empty">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" name="formattedPhone not null" id="01e667a8-36aa-49a5-a946-809b22d95df2">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx/>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="617ee387-ff6a-48b8-94f8-1b53e4bc85a8" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>e946ecb8-04d2-4d4c-b8b3-b62e26684897</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="80608029-7ddc-4230-851a-100116f4c918" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="12_Valid_Response_LowerCase_Valid_CountryCode" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="13fcdd60-f38d-443a-86f7-26a3aa5d9f9a">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>+44 0113 2047224D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>gb</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="db94f50e-0e25-4707-81c5-fd1e64654dc1">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+              <con:setting id="RecordRequestRepresentations">true</con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+}]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Match" name="validNumber true" id="ef766e40-ea90-49a1-934a-b5071aa48347">
+              <con:configuration>
+                <path>$[0]['validNumber']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="99c8eb16-d36e-4356-bbcb-6180d2357f92" name="countryCode GB">
+              <con:configuration>
+                <path>$[0]['countryCode']</path>
+                <content>"GB"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="99c8eb16-d36e-4356-bbcb-6180d2357f92" name="countryCode GB">
+              <con:configuration>
+                <path>$[0]['countryCode']</path>
+                <content>"GB"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" name="formattedPhone not empty" id="a9f705bc-876c-4937-9ca9-5170e713d52c">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" name="Response SLA" id="cc15e32a-1a18-4a9e-86f7-0ac981bcbebf">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" name="formattedPhone not null" id="b97831ee-9a16-4efd-99f4-970573c24b58">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx/>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>c8f2533b-303d-486a-8e2e-156de20d95f6</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="28809cb3-f77d-4821-bd37-a80c5f5d2a3c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="13_Valid_Response_EmptyString_PhoneNumber_Valid_CountryCode" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="c713bae0-7b2d-4325-b735-6c5bed2259bf">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value/>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>GB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="029775d7-30e6-48ad-bc89-05ebaa21164a">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+              <con:setting id="RecordRequestRepresentations">true</con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[{
+"phoneNumber": "",
+"countryCode": "${Properties#countryCode}"
+}]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Match" id="9a3f25d2-0828-4aab-b517-7296200cdfb3" name="formattedPhone null">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>null</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="originalPhone empty" id="d8da3125-d9f2-4770-b424-8b46c7d014b7">
+              <con:configuration>
+                <path>$[0]['originalPhone']</path>
+                <content>""</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="validNumber false" id="4049a1d5-ff04-4674-b184-a3126d3e6d30">
+              <con:configuration>
+                <path>$[0]['validNumber']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="dd45b2b0-1f87-4416-a31b-c20903f0b9ea" name="errorDescription phoneNumber">
+              <con:configuration>
+                <path>$[0]['errorDescription']</path>
+                <content>"Valid phone number is required"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="0f612116-1b36-4b47-aaca-5c1e024b2805" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>c8f2533b-303d-486a-8e2e-156de20d95f6</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="8e256c58-145c-4d27-aaf7-724157a90a26" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="14_Valid_Response_Valid_PhoneNumber_SingleCharacter_CountryCode" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="c5f96bc6-8d77-4ee0-9a2f-2ed92d59fe8c">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>phoneNumber</con:name>
+              <con:value>+44 0113 2047224D</con:value>
+            </con:property>
+            <con:property>
+              <con:name>countryCode</con:name>
+              <con:value>k</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST" id="9d1d1d6e-b565-4cd6-a3cd-4946e6702387">
+        <con:settings/>
+        <con:config service="http://phoneformatprocessapi.us-w2.cloudhub.io" resourcePath="/api/format/convert-to-E164" methodName="Convert-to-E164 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST" id="902b6be4-f3d9-4007-bb77-ce4b0196c4be" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="client_id" value="${#Project#client_id_qa}"/>
+  &lt;con:entry key="client_secret" value="${#Project#client_secret_qa}"/>
+&lt;/xml-fragment></con:setting>
+              <con:setting id="RecordRequestRepresentations">true</con:setting>
+            </con:settings>
+            <con:endpoint>https://${#Project#URL}</con:endpoint>
+            <con:request>[{
+"phoneNumber": "${Properties#phoneNumber}",
+"countryCode": "${Properties#countryCode}"
+}]</con:request>
+            <con:originalUri>http://phoneformatprocessapi.us-w2.cloudhub.io/api/format/convert-to-E164</con:originalUri>
+            <con:assertion type="JsonPath Match" id="a56a6a14-6ee8-45be-9551-de6ae23e2eb8" name="errorDescription countryCode">
+              <con:configuration>
+                <path>$[0]['errorDescription']</path>
+                <content>"valid two chars country code is required"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="95421588-e467-40a1-a411-173fd05c5602" name="validNumber false">
+              <con:configuration>
+                <path>$[0]['validNumber']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="34ca91de-9de6-4f56-8478-460526c59351" name="formattedPhone null">
+              <con:configuration>
+                <path>$[0]['formattedPhone']</path>
+                <content>null</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="6194172c-4b0a-4fa7-a1ec-1cad8838bce2" name="Response SLA">
+              <con:configuration>
+                <SLA>1500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>c8f2533b-303d-486a-8e2e-156de20d95f6</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>URL</con:name>
+      <con:value>phoneformatprocessapi-qa.us-w2.cloudhub.io</con:value>
+    </con:property>
+    <con:property>
+      <con:name>client_id_qa</con:name>
+      <con:value>776552af0f234b4cb0ce67ac91de3344</con:value>
+    </con:property>
+    <con:property>
+      <con:name>client_secret_qa</con:name>
+      <con:value>224B2dD432C344dFa0EF1eFcA0a6F062</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
